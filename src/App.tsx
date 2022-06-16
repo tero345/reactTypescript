@@ -7,6 +7,10 @@ import Header from 'component/layout/Header';
 import DayList from 'component/DayList';
 import Day from 'component/Day';
 
+// react-router-dom : v6 Switch >  Routes 문법 변경됨
+import { BrowserRouter, BrowserRouterProps, Route, Routes } from 'react-router-dom'
+import Empty from 'component/Empty';
+
 // 함수형 컴포넌트 JSX
 function App() {
   // 변수 설정
@@ -20,12 +24,17 @@ function App() {
 
   return (
     <div className="App">
+      <BrowserRouter>
       <Header/>
-      <DayList/>
-      <Day/>
-
-
-
+        <Routes>
+          <Route path='/' element={<DayList/>} />
+          {/* : 붙이면 변수값을 받을 수 있다 */}
+          <Route path='/day/:day' element={<Day/>} />
+          <Route path='*' element={<Empty/>}/>
+        </Routes>
+      </BrowserRouter>
+      
+      
       {/* 컴포넌트 호출 */}
       {/* <Hello age={10}/>
       <Hello age={20}/>
