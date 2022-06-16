@@ -19,8 +19,8 @@ export default function CreateWord() {
     const korRef = useRef<HTMLInputElement>(null);
     const dayRef = useRef<HTMLSelectElement>(null);
 
-    
-    function onSubmit(e: any){
+    // any는 최대한 사용하지 않기..
+    function onSubmit(e: React.FormEvent){
         // submit 방지
         e.preventDefault();
 
