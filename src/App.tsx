@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import Welcome from 'component/Welcome';
 import Hello from 'component/Hello';
+import Header from 'component/layout/Header';
+import DayList from 'component/DayList';
+import Day from 'component/Day';
 
 // 함수형 컴포넌트 JSX
 function App() {
@@ -17,12 +20,18 @@ function App() {
 
   return (
     <div className="App">
+      <Header/>
+      <DayList/>
+      <Day/>
+
+
+
       {/* 컴포넌트 호출 */}
-      <Hello age={10}/>
+      {/* <Hello age={10}/>
       <Hello age={20}/>
       <Welcome/>
       <Welcome/>
-      <Welcome/>
+      <Welcome/> */}
 
       {/* <h1 
         style={{
