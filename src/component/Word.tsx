@@ -9,7 +9,6 @@ interface WordProps {
     };
 }
 
-
 export default function Word(props: WordProps) {
     // 뜻보기 상태값
     const [isShow, setIsShow] = useState(false);

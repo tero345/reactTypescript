@@ -3,12 +3,12 @@ import UserName from './UserName';
 import World from './World';
 
 // 인터페이스
-interface HelloProps {
+interface IHello {
     age: number;
 }
 
 // TypeScript 에서는 Props를 받기 위해서는 interface를 사용해서 명확하게 선언하는게 좋다
-const Hello = (props: HelloProps) => {
+const Hello = (props: IHello) => {
     // state
     const [age, setAge] = useState(props.age); 
     const msg: string = age > 19 ? "성인 입니다." : "미성년자 불가입니다."; 
