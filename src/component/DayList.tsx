@@ -28,6 +28,10 @@ export default function DayList() {
     //         });
     // }, []);
 
+    if (days.length === 0) {
+        return <span>Loading...</span>;
+      }
+
   return (
     //return () => ()
     // key 없으면 에러 발생

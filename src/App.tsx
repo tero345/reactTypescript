@@ -8,8 +8,10 @@ import DayList from 'component/DayList';
 import Day from 'component/Day';
 
 // react-router-dom : v6 Switch >  Routes 문법 변경됨
-import { BrowserRouter, BrowserRouterProps, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Empty from 'component/Empty';
+import CreateWord from 'component/CreateWord';
+import CreateDay from 'component/CreateDay';
 
 // 함수형 컴포넌트 JSX
 function App() {
@@ -30,6 +32,8 @@ function App() {
           <Route path='/' element={<DayList/>} />
           {/* : 붙이면 변수값을 받을 수 있다 */}
           <Route path='/day/:day' element={<Day/>} />
+          <Route path='/create_word' element={<CreateWord/>} />
+          <Route path='/create_day' element={<CreateDay/>} />
           <Route path='*' element={<Empty/>}/>
         </Routes>
       </BrowserRouter>
