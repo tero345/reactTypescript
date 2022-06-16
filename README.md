@@ -47,3 +47,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## json-server
 npx json-server --watch ./src/db/data.json --port 3001
+
+## Youtube Link
+## React JS #1 강의 소개 - 초보자를 위한 리액트 강좌
+https://youtu.be/05uFo_-SGXU
